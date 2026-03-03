@@ -119,6 +119,11 @@ export default function Chat() {
     <div className="chat-app">
       {/* Sidebar */}
       <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
+        {/* Close button for mobile */}
+  <button 
+    className="sidebar-close-btn" 
+    onClick={() => setSidebarOpen(false)}
+  >✕</button>
         <div className="sidebar-header">
           <div className="brand">
             <span className="brand-icon">⬡</span>
