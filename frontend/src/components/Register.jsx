@@ -15,7 +15,7 @@ export default function Register() {
     if (form.password.length < 6) return toast.error('Password must be at least 6 characters')
     setLoading(true)
     try {
-      const res = await axios.post('/api/auth/register', form)
+      const res = await axios.post('https://ddai-backend.onrender.com/api/auth/register', form)
       login(res.data.user, res.data.token)
       toast.success('Account created! Welcome to DDAi!')
       navigate('/')

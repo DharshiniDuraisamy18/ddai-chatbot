@@ -4,7 +4,7 @@ import toast from 'react-hot-toast';
 import { v4 as uuidv4 } from 'uuid';
 import { AuthContext } from '../App';
 
-const api = axios.create({ baseURL: '/api' });
+const api = axios.create({ baseURL: 'https://ddai-backend.onrender.com/api' });
 api.interceptors.request.use(cfg => {
   const token = localStorage.getItem('token');
   if (token) cfg.headers.Authorization = `Bearer ${token}`;

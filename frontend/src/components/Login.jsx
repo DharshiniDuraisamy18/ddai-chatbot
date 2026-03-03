@@ -14,7 +14,7 @@ export default function Login() {
     e.preventDefault()
     setLoading(true)
     try {
-      const res = await axios.post('/api/auth/login', form)
+      const res = await axios.post('https://ddai-backend.onrender.com/api/auth/login', form)
       login(res.data.user, res.data.token)
       toast.success('Welcome back, ' + res.data.user.username + '!')
       navigate('/')
